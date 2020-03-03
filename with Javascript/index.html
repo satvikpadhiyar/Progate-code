@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="back"></div>
+    <div class="front"></div>
+    <script>
+      let focusBack = 50;
+      let focusFront = 1000;
+      let editCSS = document.createElement("style");
+      document.body.appendChild(editCSS);
+
+      window.addEventListener("mousemove", e => {
+        let blurBack = Math.abs(focusBack - e.clientY) / 150;
+        let blurFront = Math.abs(focusFront - e.clientY) / 200;
+
+        editCSS.innerHTML =
+          ".back { filter: blur(" +
+          blurBack +
+          "px); " +
+          "transform: scale(" +
+          (1.0 + blurFront / 300) +
+          "); }" +
+          ".front{ filter: blur(" +
+          blurFront +
+          "px); }";
+      });
+    </script>
+  </body>
+</html>
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="back"></div>
+    <div class="front"></div>
+    <script>
+      let focusBack = 50;
+      let focusFront = 1000;
+      let editCSS = document.createElement("style");
+      document.body.appendChild(editCSS);
+
+      window.addEventListener("mousemove", e => {
+        let blurBack = Math.abs(focusBack - e.clientY) / 150;
+        let blurFront = Math.abs(focusFront - e.clientY) / 200;
+
+        editCSS.innerHTML =
+          ".back { filter: blur(" +
+          blurBack +
+          "px); " +
+          "transform: scale(" +
+          (1.0 + blurFront / 300) +
+          "); }" +
+          ".front{ filter: blur(" +
+          blurFront +
+          "px); }";
+      });
+    </script>
+  </body>
+</html> -->

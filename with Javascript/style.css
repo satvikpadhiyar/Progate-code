@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.back {
+  background: url("dof-back.jpg");
+  background-size: cover;
+  position: absolute;
+  top: -1vh;
+  left: -1vw;
+  width: 102vw;
+  height: 102vh;
+}
+.front {
+  background: url("dof-front.png");
+  background-size: cover;
+  position: absolute;
+  bottom: -1vh;
+  right: 3vw;
+  width: 50vw;
+  padding-bottom: 30%;
+}
